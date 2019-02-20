@@ -1,6 +1,6 @@
 var Bowling = require("../Bowling");
 
-describe("Game instantiation", function() {
+describe("The Five Test Cases", function() {
 	it("game should be real", function() {
 		expect(new Bowling.Game).not.toEqual(undefined);
 	});
