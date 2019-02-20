@@ -2,7 +2,6 @@ function sum(a, b){
 	return a+b;
 }
 
-
 var Bowling = (function () {
 	var Game = function(){
 		var rolls = []; rolls.length = 40; rolls.fill(0);
