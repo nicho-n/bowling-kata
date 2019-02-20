@@ -29,18 +29,22 @@ var Bowling = (function () {
 				else if (frame.reduce(sum) == 10){
 					score += (10 + rolls[i+2]);
 				}
+				
 				else {
 					score += (rolls[i] + rolls[i+1]);
 				}
 			}
+			
 			return score;
 		}
+		
 		this.roll_n_times = function(pins, n){
 			for (var i = 0; i < n; i++){
 				this.roll(pins);
 			}
 		}
 	}
+	
 	return {
 		Game: Game
 	};
