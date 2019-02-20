@@ -4,7 +4,7 @@ function sum(a, b){
 
 var Bowling = (function () {
 	var Game = function(){
-		var max_rolls = 40
+		var max_rolls = 40;
 		var rolls = []; rolls.length = max_rolls; rolls.fill(0);
 		var current_roll = 0;
 
