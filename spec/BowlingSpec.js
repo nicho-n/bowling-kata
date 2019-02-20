@@ -17,7 +17,8 @@ describe("The Five Test Cases", function() {
 		expect(g.score()).toEqual(20);
 	});
 
-	it("A spare + 3 pins, + all misses scores 16 ", function() {
+	//on the kata page it says this should score 16, but that's not correct?
+	it("A spare + 3 pins, + all misses scores 16", function() {
 		var g = new Bowling.Game;
 		g.roll(5);
 		g.roll(5);
