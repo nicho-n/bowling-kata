@@ -17,7 +17,6 @@ describe("The Five Test Cases", function() {
 		expect(g.score()).toEqual(20);
 	});
 
-	//should equal 24 per rules of bowling
 	it("A spare + 3 pins, + all misses scores 16", function() {
 		var g = new Bowling.Game;
 		g.roll(5);
@@ -41,8 +40,6 @@ describe("The Five Test Cases", function() {
 		g.roll_n_times(10, 12);
 		expect(g.score()).toEqual(300);
 	})
-
-
 
 });
 

@@ -2,9 +2,10 @@ function sum(a, b){
 	return a+b;
 }
 
+
 var Bowling = (function () {
 	var Game = function(){
-		var rolls = [];
+		var rolls = []; rolls.length = 40; rolls.fill(0);
 		var current_roll = 0;
 
 		this.roll = function(pins){
@@ -15,15 +16,23 @@ var Bowling = (function () {
 		this.score = function(){
 			var score = 0; 
 			
-			for (var i = 0; i < (rolls.length/2); i++){
-				frame = [rolls[i], rolls[i+1]]
+			for (var i = 0; i < rolls.length/2; i+=2){
+				var frame = [rolls[i], rolls[i+1]];
 				
-				if (frame.reduce(sum) == 10){
-					score += 10 + rolls[i + 2]
+				if (rolls[i] == 10){
+					if (i < 10){
+						score += (10  + rolls[i+1] + rolls[i+2]);
+						i--;
+					}
+
+				}
+				
+				else if (frame.reduce(sum) == 10){
+					score += (10 + rolls[i+2]);
 				}
 
 				else {
-					score += rolls[i] + rolls[i+1]
+					score += (rolls[i] + rolls[i+1]);
 				}
 			}
 			return score;
