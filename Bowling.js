@@ -10,8 +10,14 @@ var Bowling = (function () {
 
 		this.score = function(){
 			var score = 0; 
-			for (var i = 0; i < rolls.length; i++){
-				score += rolls[i];
+			
+			for (var i = 0; i < (rolls.length/2); i++){
+				if (rolls[i] + rolls[i+1] == 10){
+					score += 10 + rolls[i + 2]
+				}
+				else {
+					score += rolls[i] + rolls[i+1]
+				}
 			}
 			return score;
 		}

@@ -17,10 +17,16 @@ describe("The Five Test Cases", function() {
 		expect(g.score()).toEqual(20);
 	});
 
-	it("A spare + 3 pins, + all misses scores 24 ", function() {
+	it("A spare + 3 pins, + all misses scores 16 ", function() {
 		var g = new Bowling.Game;
-		expect(g.score()).toEqual(24);
+		g.roll(5);
+		g.roll(5);
+		g.roll(3);
+		g.roll_n_times(0, 17);
+		expect(g.score()).toEqual(16);
 	});
+
+
 
 });
 
