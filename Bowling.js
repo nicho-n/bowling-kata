@@ -1,15 +1,16 @@
 var Bowling = (function () {
 	var Game = function(){
-		var obj = {};
+		var score = 0;
+
 		this.roll = function(pins){
-			return;
+			score += pins;
 		}
 
 		this.score = function(){
-			return 0;
+			return score;
 		}
 	}
-
+	
 	return {
 		Game: Game
 	};
