@@ -13,8 +13,13 @@ var Bowling = (function () {
 			for (var i = 0; i < rolls.length; i++){
 				score += rolls[i];
 			}
-			rolls.fill(0); //assume totalling score means game is finished 
 			return score;
+		}
+
+		this.roll_n_times = function(pins, n){
+			for (var i = 0; i < n; i++){
+				this.roll(pins);
+			}
 		}
 	}
 	return {
