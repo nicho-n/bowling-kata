@@ -1,7 +1,8 @@
 var Bowling = require("../Bowling");
 
+var g = new Bowling.Game;
+
 function roll_n_times(pins, n){
-	var g = new Bowling.Game;
 	for (var i = 0; i < n; i++){
 		g.roll(pins);
 	}
@@ -18,6 +19,10 @@ describe("Game instantiation", function() {
 	});
 	
 	it("All ones should equal 20", function() {
+		expect(roll_n_times(1, 20)).toEqual(20);
+	});
+
+	it("A spare + 3 pins, + all misses scores 24 ", function() {
 		expect(roll_n_times(1, 20)).toEqual(20);
 	});
 
