@@ -17,7 +17,7 @@ describe("The Five Test Cases", function() {
 		expect(g.score()).toEqual(20);
 	});
 
-	//on the kata page it says this should score 16, but that's not correct?
+	//should equal 24 per rules of bowling
 	it("A spare + 3 pins, + all misses scores 16", function() {
 		var g = new Bowling.Game;
 		g.roll(5);
@@ -26,6 +26,21 @@ describe("The Five Test Cases", function() {
 		g.roll_n_times(0, 17);
 		expect(g.score()).toEqual(16);
 	});
+
+	it("strike + 3 pins + 4 pins + all misses scores 24", function() {
+		var g = new Bowling.Game;
+		g.roll(10);
+		g.roll(3);
+		g.roll(4);
+		g.roll_n_times(0, 17);
+		expect(g.score()).toEqual(24);
+	});
+
+	it("12 strikes scores 300", function() {
+		var g = new Bowling.Game;
+		g.roll_n_times(10, 12);
+		expect(g.score()).toEqual(300);
+	})
 
 
 

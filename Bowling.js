@@ -1,3 +1,7 @@
+function sum(a, b){
+	return a+b;
+}
+
 var Bowling = (function () {
 	var Game = function(){
 		var rolls = [];
@@ -12,9 +16,12 @@ var Bowling = (function () {
 			var score = 0; 
 			
 			for (var i = 0; i < (rolls.length/2); i++){
-				if (rolls[i] + rolls[i+1] == 10){
+				frame = [rolls[i], rolls[i+1]]
+				
+				if (frame.reduce(sum) == 10){
 					score += 10 + rolls[i + 2]
 				}
+
 				else {
 					score += rolls[i] + rolls[i+1]
 				}
