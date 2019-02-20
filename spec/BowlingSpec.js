@@ -23,7 +23,7 @@ describe("Game instantiation", function() {
 	});
 
 	it("A spare + 3 pins, + all misses scores 24 ", function() {
-		expect(new Bowling.Game.roll_n_times(1, 24)).toEqual(20);
+		expect(new Bowling.Game.roll_n_times(1, 20)).toEqual(24);
 	});
 
 });
