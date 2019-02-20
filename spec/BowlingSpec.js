@@ -15,15 +15,15 @@ describe("Game instantiation", function() {
 	});
 
 	it("Gutter game should be zero", function() {
-		expect(roll_n_times(0, 20)).toEqual(0);
+		expect(new Bowling.Game.roll_n_times(0, 20)).toEqual(0);
 	});
 	
 	it("All ones should equal 20", function() {
-		expect(roll_n_times(1, 20)).toEqual(20);
+		expect(new Bowling.Game.roll_n_times(1, 20)).toEqual(20);
 	});
 
 	it("A spare + 3 pins, + all misses scores 24 ", function() {
-		expect(roll_n_times(1, 20)).toEqual(20);
+		expect(new Bowling.Game.roll_n_times(1, 24)).toEqual(20);
 	});
 
 });
