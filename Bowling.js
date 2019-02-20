@@ -1,7 +1,12 @@
 var Bowling = (function () {
 	var Game = function(){
-		var roll = function(){
-			
+		var obj = {};
+		this.roll = function(pins){
+			return;
+		}
+
+		this.score = function(){
+			return 0;
 		}
 	}
 
